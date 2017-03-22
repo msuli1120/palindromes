@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Palindromes</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Palindromes</h1>
+      </div>
+
+      <form action="/check" method="post">
+        <div class="form-group">
+          <label for="input">Enter your phrase</label>
+          <input id="input" name="input" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn bg-primary">Check</button>
+      </form>
+
+      {% if result is not empty %}
+        <h3>{{ result }}</h3>
+      {% endif %}
+    </div>
+  </body>
+</html>
